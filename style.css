@@ -11,7 +11,7 @@ nav {
     display: flex;
     background-color: aquamarine;
     justify-content: space-around;
-    height: 50px;
+    height: 75px;
     align-items: center;
 }
 
@@ -28,9 +28,9 @@ nav ul li a {
 }
 
 .menu-toggle {
-    /* display: none; */
+    display: none;
     flex-direction: column;
-    height: 50px;
+    height: 20px;
     justify-content: space-between;
     position: relative;
     /* no margin top, instead use below */
@@ -56,8 +56,7 @@ nav ul li a {
     height: 3px;
     background-color: black;
     border-radius: 3px;
-    transition: all 1s;
-    margin-top: 5px;
+    transition: all 0.5s;
 }
 
 /* hamburger menu animation */
@@ -66,35 +65,33 @@ nav ul li a {
     /* transform: rotate(45deg) translate(-1px -1px); */
 }
 
-.menu-toggle input:checked~span:nth-child(2) {
-    transform: rotate(45deg) translate(-1px -1px);
-}
-
-
-.menu-toggle span:nth-child(3) {
-    opacity: 0;
-    /* to make the line in the middle disappear */
-    transform: scale(0);
-}
-
 .menu-toggle span:nth-child(4) {
     transform-origin: 0 100%;
     /* transform: rotate(-45deg) translate(-1px, 0); */
 }
 
-.menu-toggle input:checked~span:nth-child(4) {
-     transform: rotate(-45deg) translate(-1px, 0);
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, 0px);
 }
 
-@media only screen and (max-width:576px){
-  .menu-toggle {
-      display: block;
-      flex-direction: column;
-      font-size: 20px; 
-  }
+/* mistake was here */
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    /* to make the line in the middle disappear */
+    transform: scale(0);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+@media screen and (max-width:576px){
   .menu-toggle {
       display: flex;
+      flex-direction: column;
+      /* font-size: 20px;  */
       z-index: 2;
+      
   }
 
   nav ul {
@@ -103,7 +100,8 @@ nav ul li a {
       top: 0;
       height: 100vh;
       flex-direction: column;
-      align-items: center;
+      /* align-items: center; */
+      /* background-color: rgba(0, 0, 0, 0.24); */
       background-color: teal;
       justify-content: space-evenly;
       z-index: 1;
@@ -115,6 +113,7 @@ nav ul li a {
 
   nav ul li a { 
     color: white;
+    margin-left: 30px;
   }
 
   nav ul.slide {
