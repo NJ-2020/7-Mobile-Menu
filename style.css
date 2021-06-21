@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0%;
+}
+
+nav {
+    display: flex;
+    background-color: aquamarine;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 50px;
+    justify-content: space-between;
+    position: relative;
+    /* no margin top, instead use below */
+    align-items: center;
+
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    left: -5px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 1s;
+    margin-top: 5px;
+}
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(-1px -1px);
+}
+
+.menu-toggle span:nth-child(3) {
+    opacity: 0;
+    /* to make the line in the middle disappear */
+    transform: scale(0);
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+
+
