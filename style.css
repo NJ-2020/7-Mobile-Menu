@@ -49,7 +49,6 @@ nav ul li a {
     z-index: 2;
 }
 
-
 .menu-toggle span {
     display: block;
     width: 28px;
@@ -71,6 +70,7 @@ nav ul li a {
 }
 
 .menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
     transform: rotate(45deg) translate(-1px, 0px);
 }
 
@@ -82,6 +82,7 @@ nav ul li a {
 }
 
 .menu-toggle input:checked~span:nth-child(4) {
+    background-color: white;
     transform: rotate(-45deg) translate(-1px, 0);
 }
 
@@ -102,13 +103,13 @@ nav ul li a {
       flex-direction: column;
       /* align-items: center; */
       /* background-color: rgba(0, 0, 0, 0.24); */
-      background-color: whitesmoke;
+      background-color: teal;
       justify-content: space-evenly;
       z-index: 1;
       width: 100%;
       transform: translateX(100%);
       transition: all 1s;
-      opacity: 0;
+      opacity: .6 !important;
   }
 
   nav ul li a { 
