@@ -9,7 +9,7 @@ body {
 
 nav {
     display: flex;
-    background-color: aquamarine;
+    background-color: white;
     justify-content: space-around;
     height: 75px;
     align-items: center;
@@ -25,6 +25,8 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: black;
+    font-family: sans-serif;
+    font-size: 25px;
 }
 
 .menu-toggle {
@@ -54,7 +56,7 @@ nav ul li a {
     display: block;
     width: 28px;
     height: 3px;
-    background-color: black;
+    background-color: #6070FF;
     border-radius: 3px;
     transition: all 0.5s;
 }
@@ -71,6 +73,7 @@ nav ul li a {
 }
 
 .menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
     transform: rotate(45deg) translate(-1px, 0px);
 }
 
@@ -82,6 +85,7 @@ nav ul li a {
 }
 
 .menu-toggle input:checked~span:nth-child(4) {
+    background-color: white;
     transform: rotate(-45deg) translate(-1px, 0);
 }
 
@@ -91,7 +95,6 @@ nav ul li a {
       flex-direction: column;
       /* font-size: 20px;  */
       z-index: 2;
-      
   }
 
   nav ul {
@@ -109,6 +112,7 @@ nav ul li a {
       transform: translateX(100%);
       transition: all 1s;
       opacity: 0;
+      padding-top: 6rem;
   }
 
   nav ul li a { 
@@ -117,8 +121,21 @@ nav ul li a {
   }
 
   nav ul.slide {
-      opacity: 1;
+      opacity: 0.8;
       transform: translateX(0);
+      background-color: #6070FF;
+      color: white;
+  }
+
+  .menu-toggle.slide {
+      background-color: white;
+  }
+
+  .header {
+      height: 100vh;
+      background-image: url(./assets/header-shapes\ mobile.png);
+      background-size: contain;
+      background-repeat: no-repeat;
   }
 }
 
