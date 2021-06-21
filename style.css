@@ -3,6 +3,10 @@
     padding: 0%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 nav {
     display: flex;
     background-color: aquamarine;
@@ -24,7 +28,7 @@ nav ul li a {
 }
 
 .menu-toggle {
-    display: none;
+    /* display: none; */
     flex-direction: column;
     height: 50px;
     justify-content: space-between;
@@ -57,8 +61,8 @@ nav ul li a {
 }
 
 .menu-toggle span:nth-child(2) {
-    transform-origin: 0 0;
-    transform: rotate(45deg) translate(-1px -1px);
+    transform-origin: 0 100%;
+    transform: rotate(40deg) translate(-1px, 0);
 }
 
 .menu-toggle span:nth-child(3) {
@@ -69,7 +73,7 @@ nav ul li a {
 
 .menu-toggle span:nth-child(4) {
     transform-origin: 0 100%;
-    transform: rotate(-45deg) translate(-1px, 0);
+    transform: rotate(-40deg) translate(-1px, 0);
 }
 
 
